@@ -1,3 +1,18 @@
-.container {
+.weatherapp {
   max-width: 500px;
+  margin: 35px auto;
+  border: 1px solid;
+  border-color: grey;
+  border-radius: 20px;
+  padding: 50px;
+}
+ul {
+  list-style-type: none;
+}
+.dayoverview {
+  padding: 0px;
+}
+small {
+  text-align: center;
+  display: block;
 }
