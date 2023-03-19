@@ -1,16 +1,25 @@
 .weatherapp {
-  max-width: 500px;
+  max-width: 600px;
   margin: 35px auto;
   border: 1px solid;
   border-color: grey;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 50px;
 }
 ul {
   list-style-type: none;
 }
 .dayoverview {
-  padding: 0px;
+  padding: 0;
+}
+strong {
+  font-size: 40px;
+}
+.temperature img {
+  margin-right: 8px;
+}
+.temperature strong {
+  margin-right: 5px;
 }
 small {
   text-align: center;
