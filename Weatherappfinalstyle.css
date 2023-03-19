@@ -1,6 +1,3 @@
-h1 {
-  color: black;
-}
-.row {
-  float: left;
+.container {
+  max-width: 500px;
 }
