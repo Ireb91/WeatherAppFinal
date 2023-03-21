@@ -6,7 +6,12 @@ function displayTemperature(response) {
   city.innerHTML = response.data.city;
   let overview = document.querySelector("#general");
   overview.innerHTML = response.data.condition.description;
+  let humidity = document.querySelector("#humidity");
+  humidity.innerHTML = Math.round(response.data.temperature.humidity);
+  let wind = document.querySelector("#wind");
+  wind.innerHTML = Math.round(response.data.wind.speed);
 }
+
 let apiKey = "037a67b0fd6f93o58ea5b48t0191c6c9";
 let apiUrl = `https://api.shecodes.io/weather/v1/current?query=Lisbon&key=${apiKey}&&units=metric`;
 axios.get(apiUrl).then(displayTemperature);
