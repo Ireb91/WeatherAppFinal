@@ -9,6 +9,10 @@
 ul {
   list-style-type: none;
 }
+li {
+  text-transform: capitalize;
+}
+
 .dayoverview {
   padding: 0;
 }
