@@ -17,16 +17,19 @@
   <body>
     <div class="container">
       <div class="weatherapp">
-        <div class="row">
-          <form id="search-city-form">
-            <input
-              type="search"
-              placeholder="Enter a city"
-              id="city-input"
-              autocomplete="off"
-            />
-            <input type="submit" value="Search" id="search-button" />
-          </form>
+        <form id="search-city-form">
+            <div class="row">
+             <input
+                type="search"
+                placeholder="Enter a city"
+                class="col-8"
+                id="city-input"
+                autocomplete="off"
+              />
+              <div class="col-4">
+              <input type="submit" value="Search" id="search-button" />
+              </div>
+        </form>
         </div>
         <h1 class="city" id="city">City</h1>
         <ul class="dayoverview" id="dayoverview">
