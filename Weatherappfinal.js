@@ -44,7 +44,17 @@ function displayTemperature(response) {
   weathericon.setAttribute("alt", `{response.data.condition.description}`);
 }
 
-let apiKey = "037a67b0fd6f93o58ea5b48t0191c6c9";
-let city = "San Diego";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&&units=metric`;
-axios.get(apiUrl).then(displayTemperature);
+function showCity(city) {
+  let apiKey = "037a67b0fd6f93o58ea5b48t0191c6c9";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function search(event) {
+  event.preventDefault();
+  let cityinput = document.querySelector("#city-input");
+  showCity(cityinput.value);
+}
+
+let searchcityform = document.querySelector("#search-city-form");
+searchcityform.addEventListener("submit", search);
