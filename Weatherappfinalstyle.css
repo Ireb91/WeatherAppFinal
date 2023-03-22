@@ -6,6 +6,10 @@
   border-radius: 10px;
   padding: 50px;
 }
+h1 {
+  padding-top: 20px;
+}
+
 ul {
   list-style-type: none;
 }
@@ -18,10 +22,10 @@ ul {
 }
 
 img {
-  width: 90px;
+  width: 80px;
 }
 strong {
-  font-size: 50px;
+  font-size: 40px;
 }
 .temperature img {
   margin-right: 8px;
