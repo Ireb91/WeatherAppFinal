@@ -16,8 +16,12 @@ ul {
 .dayoverview {
   padding: 0;
 }
+
+img {
+  width: 90px;
+}
 strong {
-  font-size: 40px;
+  font-size: 50px;
 }
 .temperature img {
   margin-right: 8px;
