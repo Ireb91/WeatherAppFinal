@@ -64,6 +64,12 @@ function showFahrenheit(event) {
   degreeselement.innerHTML = Math.round(fahrenheit);
 }
 
+function showCelsius(event) {
+  event.preventDefault();
+  let degreeselement = document.querySelector("#degrees");
+  degreeselement.innerHTML = Math.round(celsius);
+}
+
 let celsius = null;
 
 let searchcityform = document.querySelector("#search-city-form");
@@ -71,3 +77,6 @@ searchcityform.addEventListener("submit", search);
 
 let fahrenheitlink = document.querySelector("#fahrenheit");
 fahrenheitlink.addEventListener("click", showFahrenheit);
+
+let celsiuslink = document.querySelector("#celsius");
+celsiuslink.addEventListener("click", showCelsius);
