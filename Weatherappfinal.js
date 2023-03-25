@@ -23,8 +23,9 @@ function currentTime() {
 }
 
 function displayTemperature(response) {
-  let degrees = document.querySelector("#degrees");
-  degrees.innerHTML = Math.round(response.data.temperature.current);
+  let degreeselement = document.querySelector("#degrees");
+  celsius = response.data.temperature.current;
+  degreeselement.innerHTML = Math.round(response.data.temperature.current);
   let city = document.querySelector("#city");
   console.log(response);
   city.innerHTML = response.data.city;
@@ -56,5 +57,17 @@ function search(event) {
   showCity(cityinput.value);
 }
 
+function showFahrenheit(event) {
+  event.preventDefault();
+  let degreeselement = document.querySelector("#degrees");
+  let fahrenheit = (celsius * 9) / 5 + 32;
+  degreeselement.innerHTML = Math.round(fahrenheit);
+}
+
+let celsius = null;
+
 let searchcityform = document.querySelector("#search-city-form");
 searchcityform.addEventListener("submit", search);
+
+let fahrenheitlink = document.querySelector("#fahrenheit");
+fahrenheitlink.addEventListener("click", showFahrenheit);
