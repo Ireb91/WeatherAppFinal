@@ -24,14 +24,14 @@ input[type="submit"] {
   height: 30px;
   border: 1px solid;
   border-radius: 4px;
-  border-color: #537791;
-  background-color: #537791;
+  border-color: #645d9b;
+  background-color: #645d9b;
   color: white;
 }
 
 h1 {
   margin-top: 30px;
-  color: #47667b;
+  color: #645d9b;
 }
 
 .row {
@@ -51,6 +51,9 @@ h1 {
   width: 50%;
 }
 
+.current {
+  color: #a6b1e1;
+}
 .general {
   text-transform: capitalize;
 }
@@ -64,7 +67,7 @@ img {
 }
 strong {
   font-size: 40px;
-  color: #47667b;
+  color: #645d9b;
 }
 
 ul {
