@@ -27,7 +27,6 @@ function displayTemperature(response) {
   celsius = response.data.temperature.current;
   degreeselement.innerHTML = Math.round(response.data.temperature.current);
   let city = document.querySelector("#city");
-  console.log(response);
   city.innerHTML = response.data.city;
   let overview = document.querySelector("#general");
   overview.innerHTML = response.data.condition.description;
