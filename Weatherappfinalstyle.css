@@ -1,3 +1,7 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .weatherapp {
   max-width: 600px;
   margin: 35px auto;
@@ -14,6 +18,7 @@ h1 {
 ul {
   list-style-type: none;
 }
+
 .general {
   text-transform: capitalize;
 }
@@ -48,4 +53,21 @@ small {
 
 .temperature .active:hover {
   text-decoration: none;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left {
+  width: 20%;
+}
+
+.middle {
+  width: 30%;
+}
+.right {
+  width: 50%;
 }
