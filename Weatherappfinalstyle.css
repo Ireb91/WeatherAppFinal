@@ -11,12 +11,43 @@ body {
   padding: 50px;
 }
 
-h1 {
-  padding-top: 20px;
+input[type="search"] {
+  width: 50%;
+  height: 30px;
+  border: 1px solid;
+  border-radius: 4px;
 }
 
-ul {
-  list-style-type: none;
+input[type="submit"] {
+  width: 12%;
+  height: 30px;
+  border: 1px solid;
+  border-radius: 4px;
+  border-color: #38598b;
+  background-color: #38598b;
+  color: white;
+}
+
+h1 {
+  margin-top: 30px;
+  color: #113f67;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left {
+  width: 20%;
+}
+
+.middle {
+  width: 30%;
+}
+.right {
+  width: 50%;
 }
 
 .general {
@@ -28,12 +59,20 @@ ul {
 }
 
 img {
-  width: 80px;
+  width: 100px;
 }
 strong {
   font-size: 40px;
+  color: #113f67;
 }
 
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 8px;
+}
 .temperature img {
   margin-right: 8px;
 }
@@ -55,19 +94,7 @@ small {
   text-decoration: none;
 }
 
-.row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.left {
-  width: 20%;
-}
-
-.middle {
-  width: 30%;
-}
-.right {
-  width: 50%;
+sup {
+  position: relative;
+  bottom: 15px;
 }
