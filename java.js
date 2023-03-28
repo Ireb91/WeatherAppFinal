@@ -24,19 +24,19 @@ function currentTime() {
 
 function displayTemperature(response) {
   let degreeselement = document.querySelector("#degrees");
+  let city = document.querySelector("#city");
+  let overview = document.querySelector("#general");
+  let humidity = document.querySelector("#humidity");
+  let wind = document.querySelector("#wind");
+  let current = document.querySelector("#current");
+  let weathericon = document.querySelector("#icon");
   celsius = response.data.temperature.current;
   degreeselement.innerHTML = Math.round(response.data.temperature.current);
-  let city = document.querySelector("#city");
   city.innerHTML = response.data.city;
-  let overview = document.querySelector("#general");
   overview.innerHTML = response.data.condition.description;
-  let humidity = document.querySelector("#humidity");
   humidity.innerHTML = Math.round(response.data.temperature.humidity);
-  let wind = document.querySelector("#wind");
   wind.innerHTML = Math.round(response.data.wind.speed);
-  let current = document.querySelector("#current");
   current.innerHTML = currentTime();
-  let weathericon = document.querySelector("#icon");
   weathericon.setAttribute(
     "src",
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
@@ -73,6 +73,36 @@ function showCelsius(event) {
   degreeselement.innerHTML = Math.round(celsius);
 }
 
+function showCurrentWeather(response) {
+  let degreeselement = document.querySelector("#degrees");
+  let city = document.querySelector("#city");
+  let overview = document.querySelector("#general");
+  let humidity = document.querySelector("#humidity");
+  let wind = document.querySelector("#wind");
+  let current = document.querySelector("#current");
+  let weathericon = document.querySelector("#icon");
+  celsius = response.data.temperature.current;
+  degreeselement.innerHTML = Math.round(response.data.temperature.current);
+  city.innerHTML = response.data.city;
+  overview.innerHTML = response.data.condition.description;
+  humidity.innerHTML = Math.round(response.data.temperature.humidity);
+  wind.innerHTML = Math.round(response.data.wind.speed);
+  current.innerHTML = currentTime();
+  weathericon.setAttribute(
+    "src",
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+  );
+  weathericon.setAttribute("alt", `{response.data.condition.description}`);
+}
+
+function showCurrentLocation(response) {
+  let latitude = response.coords.latitude;
+  let longitude = response.coords.longitude;
+  let apiKey = "037a67b0fd6f93o58ea5b48t0191c6c9";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${longitude}&lat=${latitude}&key=${apiKey}`;
+  axios.get(apiUrl).then(showCurrentWeather);
+}
+
 let celsius = null;
 
 let searchcityform = document.querySelector("#search-city-form");
@@ -83,3 +113,5 @@ fahrenheitlink.addEventListener("click", showFahrenheit);
 
 let celsiuslink = document.querySelector("#celsius");
 celsiuslink.addEventListener("click", showCelsius);
+
+navigator.geolocation.getCurrentPosition(showCurrentLocation);
