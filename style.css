@@ -104,3 +104,7 @@ sup .active {
 sup .active:hover {
   text-decoration: none;
 }
+
+.weatherforecast {
+  column-count: 6;
+}
