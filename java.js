@@ -23,18 +23,22 @@ function currentTime() {
 }
 
 function displayForecast() {
-  let forecastElement = document.querySelector("#weather-forecast");
-  forecastElement.innerHTML = `
-      <div class="forecast" id="weatherforecast">
-        <div class="row">
-          <div class="col-2"> 
-            <div class="forecastdate">
-            Mon
-            </div>
-            <img id="forecastimg" src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" alt="">
-            <small>20/18</small>
-          </div>
-`;
+  let forecastElement = document.querySelector("#weatherforecast");
+  let forecastHTML = `<div class="row"`;
+  forecastHTML =
+    forecastHTML +
+    `  <div class="row">
+                  <div class="col-2"> 
+                  <div class="forecastdate">Mon</div>
+                  <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" alt=""/>
+                  <div class="forecast-temperatures">
+                    <span id="max">20°</span>
+                    <span id="min">18°</span>
+                  </div>  
+                  </div>
+                  </div>`;
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function displayTemperature(response) {
@@ -130,4 +134,5 @@ let celsiuslink = document.querySelector("#celsius");
 celsiuslink.addEventListener("click", showCelsius);
 
 navigator.geolocation.getCurrentPosition(showCurrentLocation);
+
 displayForecast();

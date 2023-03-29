@@ -88,7 +88,3 @@ small .active {
 small .active:hover {
   text-decoration: none;
 }
-
-.forecastimg {
-  width: 100px;
-}
