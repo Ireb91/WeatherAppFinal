@@ -24,19 +24,20 @@ function currentTime() {
 
 function displayForecast() {
   let forecastElement = document.querySelector("#weatherforecast");
-  let forecastHTML = `<div class="row"`;
-  forecastHTML =
-    forecastHTML +
-    `  <div class="row">
-                  <div class="col-2"> 
-                  <div class="forecastdate">Mon</div>
-                  <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" alt=""/>
-                  <div class="forecast-temperatures">
-                    <span id="max">20°</span>
-                    <span id="min">18°</span>
-                  </div>  
-                  </div>
-                  </div>`;
+  let forecastHTML = `<div class="row">`;
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2"> 
+      <div class="forecastdate">${day}</div>
+        <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" alt=""/>
+          <div class="forecast-temperatures">
+           <span id="max">20°</span>
+           <span id="min">18°</span>
+          </div>  
+        </div>`;
+  });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
