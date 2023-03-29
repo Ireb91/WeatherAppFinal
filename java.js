@@ -24,10 +24,10 @@ function currentTime() {
 
 function displayForecast(response) {
   console.log(response);
+  let forecastweek = response.data.daily;
   let forecastElement = document.querySelector("#weatherforecast");
   let forecastHTML = `<div class="row">`;
-  let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-  days.forEach(function (day) {
+  forecastweek.forEach(function (day) {
     forecastHTML =
       forecastHTML +
       `<div class="col-2"> 
