@@ -8,7 +8,11 @@ body {
   border: 1px solid;
   border-color: black;
   border-radius: 10px;
-  padding: 50px;
+  padding: 30px;
+}
+
+form {
+  margin-bottom: 20px;
 }
 
 input[type="search"] {
@@ -103,8 +107,4 @@ sup .active {
 
 sup .active:hover {
   text-decoration: none;
-}
-
-.weatherforecast {
-  column-count: 6;
 }
