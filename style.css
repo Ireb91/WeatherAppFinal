@@ -34,25 +34,15 @@ input[type="submit"] {
 }
 
 h1 {
+  font-size: 40px;
+  font-weight: 600;
   margin-top: 30px;
   color: #645d9b;
 }
 
 .row {
-  display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.left {
-  width: 20%;
-}
-
-.middle {
-  width: 30%;
-}
-.right {
-  width: 50%;
 }
 
 .current {
@@ -88,23 +78,17 @@ li {
 .temperature strong {
   margin-right: 5px;
 }
-small {
-  text-align: center;
-  display: block;
-  font-size: 15px;
-}
 
-sup {
-  position: relative;
-  bottom: 15px;
-  font-weight: bold;
-}
-sup .active {
+small .active {
   color: black;
   cursor: default;
   text-decoration: none;
 }
 
-sup .active:hover {
+small .active:hover {
   text-decoration: none;
+}
+
+.forecastimg {
+  width: 100px;
 }

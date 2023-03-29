@@ -22,6 +22,21 @@ function currentTime() {
   return `${day}, ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#weather-forecast");
+  forecastElement.innerHTML = `
+      <div class="forecast" id="weatherforecast">
+        <div class="row">
+          <div class="col-2"> 
+            <div class="forecastdate">
+            Mon
+            </div>
+            <img id="forecastimg" src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" alt="">
+            <small>20/18</small>
+          </div>
+`;
+}
+
 function displayTemperature(response) {
   let degreeselement = document.querySelector("#degrees");
   let city = document.querySelector("#city");
@@ -115,3 +130,4 @@ let celsiuslink = document.querySelector("#celsius");
 celsiuslink.addEventListener("click", showCelsius);
 
 navigator.geolocation.getCurrentPosition(showCurrentLocation);
+displayForecast();
