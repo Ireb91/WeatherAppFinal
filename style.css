@@ -6,7 +6,7 @@ body {
   max-width: 700px;
   margin: 40px auto;
   border: 1px solid;
-  border-color: black;
+  border-color: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   padding: 55px 65px;
 }
@@ -20,7 +20,7 @@ input[type="search"] {
   height: 35px;
   border: 1px solid;
   border-radius: 4px;
-  border-color: black;
+  border-color: rgba(0, 0, 0, 0.6);
 }
 
 input[type="submit"] {
@@ -41,14 +41,11 @@ h1 {
   margin-left: 3px;
 }
 
-.row {
-  align-items: center;
-  justify-content: center;
-}
-
 .dayoverview {
   margin-left: 3px;
   font-size: 18px;
+  font-weight: 600;
+  opacity: 0.8;
 }
 
 .current {
@@ -65,36 +62,32 @@ h1 {
   padding: 15px 0px 0px;
 }
 
-div.col-2 {
-  margin: 0px;
-}
 strong {
   font-size: 40px;
   color: #645d9b;
+  position: relative;
+  top: 20px;
+  text-align: left;
 }
 
 ul {
   list-style-type: none;
+  margin-left: 50px;
+  opacity: 0.8;
+}
+
+div .col-7 {
+  margin: 0px;
+  padding: 0px;
+  align-self: center;
+  font-weight: 600;
 }
 
 li {
   margin-bottom: 8px;
 }
 
-.temperature img {
-  margin-right: 8px;
-}
-.temperature strong {
-  margin-right: 5px;
-}
-
-.col-2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
 .col-2 img {
   display: block;
-  margin: 0 auto;
   width: 50px;
 }
