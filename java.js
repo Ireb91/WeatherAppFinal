@@ -98,23 +98,7 @@ function search(event) {
   event.preventDefault();
   let cityinput = document.querySelector("#city-input");
   showCity(cityinput.value);
-}
-
-function showFahrenheit(event) {
-  event.preventDefault();
-  let degreeselement = document.querySelector("#degrees");
-  let fahrenheit = (celsius * 9) / 5 + 32;
-  celsiuslink.classList.remove("active");
-  fahrenheitlink.classList.add("active");
-  degreeselement.innerHTML = Math.round(fahrenheit);
-}
-
-function showCelsius(event) {
-  event.preventDefault();
-  let degreeselement = document.querySelector("#degrees");
-  celsiuslink.classList.add("active");
-  fahrenheitlink.classList.remove("active");
-  degreeselement.innerHTML = Math.round(celsius);
+  searchcityform.reset();
 }
 
 function showCurrentWeather(response) {

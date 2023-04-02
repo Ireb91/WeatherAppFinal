@@ -4,11 +4,11 @@ body {
 
 .weatherapp {
   max-width: 700px;
-  margin: 40px auto;
+  margin: 30px auto;
   border: 1px solid;
   border-color: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
-  padding: 55px 65px 30px;
+  padding: 50px 65px 30px;
   background-color: rgba(249, 251, 252, 0.4);
 }
 
