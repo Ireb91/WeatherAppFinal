@@ -57,7 +57,7 @@ function displayForecast(response) {
 function retrieveCoords(coordinates) {
   console.log(coordinates);
   let apiKey = "037a67b0fd6f93o58ea5b48t0191c6c9";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&&uniys=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -140,7 +140,9 @@ function showCurrentLocation(response) {
   let longitude = response.coords.longitude;
   let apiKey = "037a67b0fd6f93o58ea5b48t0191c6c9";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${longitude}&lat=${latitude}&key=${apiKey}`;
+  let apiUrl2 = `https://api.shecodes.io/weather/v1/forecast?lon=${longitude}&lat=${latitude}&key=${apiKey}&&units=metric`;
   axios.get(apiUrl).then(showCurrentWeather);
+  axios.get(apiUrl2).then(displayForecast);
 }
 
 let celsius = null;
