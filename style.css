@@ -37,6 +37,12 @@ input[type="submit"] {
   box-shadow: 2px 2px 2px grey;
   position: relative;
   bottom: 2px;
+  transition: all ease-in-out 200ms;
+}
+
+input[type="submit"]:hover {
+  background-color: #56a7a7;
+  opacity: 0.7;
 }
 
 h1 {
