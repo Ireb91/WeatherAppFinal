@@ -38,11 +38,13 @@ function displayForecast(response) {
     if (index < 6) {
       forecastHTML =
         forecastHTML +
-        `<div class="col-2"> 
-      <div class="forecastdate">${formatDate(forecastday.time)}</div>
+        `<div class="col-2 mt-3 text-center"> 
+      <div class="fw-bold" id="forecastdate">${formatDate(
+        forecastday.time
+      )}</div>
         <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
           forecastday.condition.icon
-        }.png" alt=""/>
+        }.png" class="mx-auto d-block" alt=""/>
           <div class="forecast-temperatures">
            <span id="max">${Math.round(forecastday.temperature.maximum)}°</span>
            <span id="min">${Math.round(forecastday.temperature.minimum)}°</span>
