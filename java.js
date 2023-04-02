@@ -22,28 +22,32 @@ function currentTime() {
   return `${day}, ${hours}:${minutes}`;
 }
 
+function formatDate(time) {
+  let date = new Date(time * 1000);
+  let day = date.getDay();
+  let daysoftheweek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return daysoftheweek[day];
+}
+
 function displayForecast(response) {
-  console.log(response);
   let forecastweek = response.data.daily;
   let forecastElement = document.querySelector("#weatherforecast");
   let forecastHTML = `<div class="row">`;
-  forecastweek.forEach(function (forecastdate) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col-2"> 
-      <div class="forecastdate">${forecastdate.time}</div>
+  forecastweek.forEach(function (forecastday, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col-2"> 
+      <div class="forecastdate">${formatDate(forecastday.time)}</div>
         <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
-          forecastdate.condition.icon
+          forecastday.condition.icon
         }.png" alt=""/>
           <div class="forecast-temperatures">
-           <span id="max">${Math.round(
-             forecastdate.temperature.maximum
-           )}°</span>
-           <span id="min">${Math.round(
-             forecastdate.temperature.minimum
-           )}°</span>
+           <span id="max">${Math.round(forecastday.temperature.maximum)}°</span>
+           <span id="min">${Math.round(forecastday.temperature.minimum)}°</span>
           </div>  
         </div>`;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
@@ -150,5 +154,3 @@ let celsiuslink = document.querySelector("#celsius");
 celsiuslink.addEventListener("click", showCelsius);
 
 navigator.geolocation.getCurrentPosition(showCurrentLocation);
-
-displayForecast();
