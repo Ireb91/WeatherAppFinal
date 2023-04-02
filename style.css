@@ -79,16 +79,6 @@ li {
   margin-right: 5px;
 }
 
-small .active {
-  color: black;
-  cursor: default;
-  text-decoration: none;
-}
-
-small .active:hover {
-  text-decoration: none;
-}
-
 .col-2 {
   text-align: center;
   margin-bottom: 30px;

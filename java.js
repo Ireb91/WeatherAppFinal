@@ -30,6 +30,7 @@ function formatDate(time) {
 }
 
 function displayForecast(response) {
+  console.log(response);
   let forecastweek = response.data.daily;
   let forecastElement = document.querySelector("#weatherforecast");
   let forecastHTML = `<div class="row">`;
@@ -147,10 +148,6 @@ let celsius = null;
 let searchcityform = document.querySelector("#search-city-form");
 searchcityform.addEventListener("submit", search);
 
-let fahrenheitlink = document.querySelector("#fahrenheit");
-fahrenheitlink.addEventListener("click", showFahrenheit);
-
-let celsiuslink = document.querySelector("#celsius");
-celsiuslink.addEventListener("click", showCelsius);
-
 navigator.geolocation.getCurrentPosition(showCurrentLocation);
+
+displayForecast();
