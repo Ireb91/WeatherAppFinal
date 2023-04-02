@@ -9,6 +9,7 @@ body {
   border-color: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   padding: 55px 65px 30px;
+  background-color: rgba(249, 251, 252, 0.4);
 }
 
 form {
@@ -20,6 +21,7 @@ input[type="search"] {
   height: 35px;
   border: 1px solid;
   border-radius: 4px;
+  background-color: rgba(249, 251, 252, 0.2);
   border-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -28,21 +30,24 @@ input[type="submit"] {
   height: 35px;
   border: 1px solid;
   border-radius: 4px;
-  border-color: #645d9b;
-  background-color: #645d9b;
+  border-color: #56a7a7;
+  background-color: #56a7a7;
+  opacity: 0.9;
   color: white;
   box-shadow: 2px 2px 2px grey;
+  position: relative;
+  bottom: 2px;
 }
 
 h1 {
   font-size: 40px;
   font-weight: 600;
-  color: #645d9b;
-  margin-left: 3px;
+  margin-left: 20px;
+  opacity: 0.9;
 }
 
 .dayoverview {
-  margin-left: 3px;
+  margin-left: 20px;
   font-size: 18px;
   font-weight: 600;
   opacity: 0.8;
@@ -64,7 +69,7 @@ h1 {
 
 strong {
   font-size: 40px;
-  color: #645d9b;
+  color: #a0dbdb;
   position: relative;
   top: 20px;
   text-align: left;
@@ -72,7 +77,8 @@ strong {
 
 ul {
   list-style-type: none;
-  margin-left: 20px;
+  margin-left: 30px;
+  font-size: 18px;
   opacity: 0.8;
 }
 
