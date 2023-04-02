@@ -17,6 +17,7 @@ form {
 }
 
 input[type="search"] {
+  font-size: 18px;
   width: 84%;
   height: 35px;
   border: 1px solid;
@@ -26,6 +27,7 @@ input[type="search"] {
 }
 
 input[type="submit"] {
+  font-size: 18px;
   width: 15%;
   height: 35px;
   border: 1px solid;

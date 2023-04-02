@@ -30,7 +30,6 @@ function formatDate(time) {
 }
 
 function displayForecast(response) {
-  console.log(response);
   let forecastweek = response.data.daily;
   let forecastElement = document.querySelector("#weatherforecast");
   let forecastHTML = `<div class="row">`;
